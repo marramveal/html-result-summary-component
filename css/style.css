@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root { 
+/*Primary*/    
+--RED: hsl(0, 100%, 67%);
+--ORANGE: hsl(39, 100%, 56%);
+--GREEN: hsl(166, 100%, 37%);
+--COBALT-BLUE: hsl(234, 85%, 45%);
+
+/* Gradients left card */
+--BG-SLATE-BLUE: hsl(252, 100%, 67%);
+--BG-ROYAL-BLUE: hsl(241, 81%, 54%);
+
+/* Background section summary */
+--BG-RED: hsla(0, 100%, 67%, 0.1);
+--BG-ORANGE: hsla(39, 100%, 56%, 0.1);
+--BG-GREEN: hsla(166, 100%, 37%, 0.1);
+--BG-COBALT-BLUE: hsla(234, 85%, 45%, 0.1);
+
+/* Gradients circle */
+--CIRCLE-BLUE: hsla(256, 72%, 46%, 1);
+--CIRCLE-DARK-BLUE: hsla(241, 72%, 46%, 0);
+
+/* Neutral */
+--WHITE: hsl(0, 0%, 100%);
+--PALE-BLUE: hsl(221, 100%, 96%);
+--LAVENDER: hsl(241, 100%, 89%);
+--DARK-BLUE: hsl(224, 30%, 27%);
+}
+
+/* RESET */
+*,
+*::before,
+*::after {  
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.background--red {
+  background: var(--BG-RED);
+}
+.background--orange {
+  background: var(--BG-ORANGE);
+}
+.background--green {
+  background: var(--BG-GREEN);
+}
+.background--blue {
+  background: var(--BG-COBALT-BLUE);
+}
+
+.text--red { 
+  color: var(--RED);  
+}
+.text--orange { 
+  color: var(--ORANGE);
+}
+.text--green { 
+  color: var(--GREEN);
+}
+.text--blue { 
+  color: var(--COBALT-BLUE);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    box-sizing: border-box;
+    background-color: var(--WHITE);
+    font-family: 'Hanken Grotesk', 'sans-serif';
+    font-size: 18px;
+    font-weight: 500;         
+}
+
+.container {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  max-width: 600px; 
+  min-height: 500px;  
+  
+}
+
+.card__result {
+  background: linear-gradient(to top, var(--BG-ROYAL-BLUE), var(--BG-SLATE-BLUE));
+  display: flex;
+  flex-direction: column;    
+  align-items: center;    
+  padding: 20px 40px 50px 40px;  
+  height: 400px;  
+  width: 50%;
+  border-radius: 20px;
+  color: white;
+  z-index: 1;
+
+}
+
+.card__summary {
+  display: flex;
+  flex-direction: column;    
+  align-items: start;    
+  flex-wrap: nowrap;  
+  padding: 20px 20px;  
+  height: 400px;
+  width: 50%;  
+  background: var(--WHITE);
+  box-shadow: 10px 9px 24px 10px var(--PALE-BLUE);
+  width: 50%;
+  border-radius: 0 20px 10px 0; 
+}
+
+.transparent {
+   opacity: 0.6;
+}
+
+.card__title { 
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.result__score {
+  background: linear-gradient(to bottom, var(--CIRCLE-BLUE), var(--CIRCLE-DARK-BLUE));
+  border-radius: 50%;
+  width: 150px;
+  height: 150px; 
+}
+
+.score__main {
+  font-weight: 800;
+  font-size: 50px;
+  margin: 30px 50px -5px;
+}
+
+.score__summary { 
+  margin-left: 55px;
+  font-size: 15px;
+}
+
+.result__label {
+  margin: 20px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.result__description {
+  text-align: center;
+  font-size: 15px;
+}
+
+.summary__section {
+  display: flex;
+  flex-direction: column;  
+  gap: 1rem;
+}
+
+.summary { 
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;  
+}
+
+.text-bold { 
+  color: #000;
+  font-weight: 700;
+}
+
+.summary__description {
+  padding-right: 3.5rem;
+  padding-left: 5px;
+  font-weight: 700;
+}
+
+.btn {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  background: var(--DARK-BLUE);
+  color: var(--WHITE);
+  padding: 1rem 5.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.btn--active:hover {
+  background: linear-gradient(to top, var(--BG-ROYAL-BLUE), var(--BG-SLATE-BLUE));
+  color: white;
+  border: 1px solid white;
+} 
+
+
+@media screen and (max-width: 500px) {
+
+.container {
+    display: block;
+    width: 100%;
+    margin: 0;    
+  }
+
+  .card__result {
+    width: 100%;
+  }
+  .card__summary {
+    width: 100%;
+  }
+}

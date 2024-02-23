@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    
+  </head>
+  <body>
+    <main class="container">
+
+      <div class="card__result">
+          <h3 class="card__title transparent">Your result</h3>
+        <div class="result__score">
+          <div class="score__main">76</div>
+          <div class="score__summary transparent">of 100</div>
+        </div>
+        <div class="result__label">Great</div>
+        <div class="result__description transparent">
+          You scored higher than 65% of the people who have taken these tests.
+        </div>
+      </div>
+
+      <div class="card__summary">        
+          <h3 class="card__title">Summary</h3>   
+
+          <div class="summary__section">      
+
+          <div class="summary background--red text--red">
+            <div class="summary__name">
+              <img src="img/icon-reaction.svg" alt="Reaction"/>
+              <span class="summary__description">Reaction</span>
+            </div>   
+              <span class="text-bold">80 <span class="transparent">/ 100</span></span>
+            </div>
+
+          <div class="summary background--orange text--orange">
+            <div class="summary__name">
+              <img src="img/icon-memory.svg" alt="Memory"/>
+              <span class="summary__description">Memory</span>
+            </div>   
+              <span class="text-bold">92 <span class="transparent">/ 100</span></span>
+            </div>
+
+          <div class="summary background--green text--green">
+            <div class="summary__name">
+              <img src="img/icon-verbal.svg" alt="Verbal"/>
+              <span class="summary__description">Verbal</span>
+            </div>   
+              <span class="text-bold">61 <span class="transparent">/ 100</span></span>
+            </div>
+
+          <div class="summary background--blue text--blue">
+            <div class="summary__name">
+              <img src="img/icon-visual.svg" alt="Visual"/>
+              <span class="summary__description">Visual</span>
+            </div>   
+              <span class="text-bold">72 <span class="transparent">/ 100</span></span>
+            </div>
+              <button class="btn btn--active">Continue</button>
+        </div>
+      </div>
+    </main>   
+  </body>
+</html>
